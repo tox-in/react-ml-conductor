@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { ChartLine, Car, AlertCircle } from "lucide-react";
+import { ChartLine, Car, AlertCircle, TrendingUp } from "lucide-react";
 import VehicleForm from "@/components/prediction/VehicleForm";
 import PredictionResult from "@/components/prediction/PredictionResult";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -69,10 +69,15 @@ export default function PredictionTool() {
   return (
     <div className="container max-w-6xl mx-auto py-8 px-4">
       <div className="mb-12 text-center">
-        <h1 className="text-3xl font-bold tracking-tight mb-4">Vehicle Price Prediction Tool</h1>
+        <h1 className="text-3xl font-bold tracking-tight mb-4">
+          <span className="flex items-center justify-center gap-2">
+            <TrendingUp className="h-6 w-6 text-primary" />
+            Vehicle Price Prediction Tool
+          </span>
+        </h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Our machine learning model analyzes vehicle specifications to predict the optimal purchase price.
-          Enter your vehicle details below to get a price estimate.
+          Enter your vehicle details below to get a price estimate and help improve our model.
         </p>
       </div>
 
